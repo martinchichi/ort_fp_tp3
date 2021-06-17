@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>220</y>
+      <w>130</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Vehiculo
+-
+//marca:Marca
+//tipo:Tipo
+precio: double
+-
+getPrecio():double
+getMarca(): Marca
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>710</x>
+      <y>210</y>
+      <w>90</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;enum&gt;
+Tipo
+-
+Auto
+Camioneta
+Utilitario
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>390</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Interesado
+-
+dni:String
+//fechaNacimiento:Fecha
+-
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>220</y>
+      <w>320</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Concesionaria
+-
+nombre: String
+direccion:String
+-
+vehiculosMasEconomico(): ArrayList&lt;Vehiculos&gt;
+cantidadVehiculosSegunMarca(marca:Marca): int
+calcularPrecioPromedio():double
+
+
+bg=light_gray</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>460</x>
+      <y>30</y>
+      <w>90</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;enum&gt;
+Marca
+-
+Qeugot
+Giat
+Debrolet
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>570</x>
+      <y>260</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+tipo
+m1=1</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>470</x>
+      <y>120</y>
+      <w>70</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+marca
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>330</x>
+      <y>260</y>
+      <w>140</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+vehiculos
+
+m1=n</panel_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>320</y>
+      <w>40</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+
+m1=n</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>750</x>
+      <y>410</y>
+      <w>70</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>Fecha
+-
+dia:int
+mes:int
+anio:int</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>610</x>
+      <y>420</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+fechaNacimiento
+m1=1</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

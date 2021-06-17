@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>620</x>
+      <y>370</y>
+      <w>190</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>Domicilio
+-
+calle: String
+nro: String
+cp:int
+-
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>70</y>
+      <w>380</w>
+      <h>170</h>
+    </coordinates>
+    <panel_attributes>Agenda
+-
+
+-
++Agenda()
+-buscarPersona(dni:String): Persona
++agregarPersona(dni:String, nombre:String, apellido:String)
++removerPersona(dni:String)
++listarPersonas()
++devolverUltimo(): Persona
++eliminarTodosElementosAMano()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>590</x>
+      <y>70</y>
+      <w>260</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Persona
+-
+-dni: String
+-nombre: String
+-apellido: String
+-
++Persona(dni:String, n: String,a:String)
++setNombre(n:String)
++setApellido(a:String)
++getDni()
++getNombre()
++getApellido
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>650</x>
+      <y>250</y>
+      <w>90</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+-domicilio
+m1=1
+
+</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>400</x>
+      <y>90</y>
+      <w>210</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+-personas
+m1=0.n
+
+
+</panel_attributes>
+    <additional_attributes>190.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>
