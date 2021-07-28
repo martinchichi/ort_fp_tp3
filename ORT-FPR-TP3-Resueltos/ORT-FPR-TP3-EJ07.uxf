@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>390</y>
+      <w>120</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Paciente
+--
+-DNI:String
+-nombre:String
+-apellido:String
+-telefono:String
+--
++ toString(): String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>140</x>
+      <y>180</y>
+      <w>300</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Agenda
+--
+-cantidadDeNumeros: int
+--
++ Agenda(int)
+-buscarTurno(String): Turno
++registrarTurno(String,String,String,String): Resultado
++listarTurnos(): void
++darPresente(String):boolean
++anularTurno(String):boolean
++obtenerAusentes():ArrayList&lt;Paciente&gt;
+-buscarPaciente(String):Paciente
+-asistioAlTurno(Paciente):boolean
+_-esDatoValido(String): boolean_
+_-esDatoValido(int): boolean_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>200</y>
+      <w>180</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>Turno
+--
+- sePresentoPaciente: boolean
+--
++ mismoDNI(String): boolean
++ mostrarDatos(): void
++ darPresente(): boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>260</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- turnos
+m1=*</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>230</x>
+      <y>430</y>
+      <w>190</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Resultado
+&lt;&lt;Enum&gt;&gt;
+--
+_+DATOS_INVALIDOS_
+_+NO_HAY_MAS_TURNOS_
+_+YA_HAY_TURNO_ASIGNADO_
+_+TURNO_CONFIRMADO_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>300</x>
+      <y>390</y>
+      <w>30</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>10.0;40.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>290</y>
+      <w>90</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+- paciente
+m1=1</panel_attributes>
+    <additional_attributes>13.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>430</x>
+      <y>330</y>
+      <w>140</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;.</panel_attributes>
+    <additional_attributes>120.0;120.0;40.0;120.0;40.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>

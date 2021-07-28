@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>310</y>
+      <w>460</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>RecetarioInteligente
+--
+
+
+
+-
++ prepararListadoAComprar(String,int,Heladera,Alacena):ArrayList&lt;Item&gt;
++ recetasPosiblesAPreparar(Heladera,Alacena,int):ArrayList&lt;String&gt;
+- buscarReceta(String):Receta
+- verificarIngredientes(ArrayList&lt;Ingrediente&gt;,int,Heladera,Alacena):ArrayList&lt;Item&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>760</x>
+      <y>80</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Alacena
+--
+- fabricante:String
+
+
+--
+- buscarproducto(String):Producto
++ verificarCantidad(String,double):double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>90</x>
+      <y>80</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Heladera
+--
+- marca: String
+
+
+--
+- buscarproducto(String):Producto
++ verificarCantidad(String,double):double
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>80</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Producto
+--
+- nombre: String
+- cantidad:double
+- fechaVto: String
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>180</x>
+      <y>520</y>
+      <w>270</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Receta
+--
+- codigo: String
+- nombre: String
+
+--
++ obtenerIngredientes():ArrayList&lt;Ingrediente&gt;</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>550</x>
+      <y>530</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Ingrediente
+--
+- nombre: String
+- cantNecesaria: double
+
+--
++ esRefrigerado():boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>850</x>
+      <y>410</y>
+      <w>150</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;enum&gt;&gt;
+Tipo
+--
++ REFRIGERADO
++ NO_REFRIGERADO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>750</x>
+      <y>500</y>
+      <w>200</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+- tipo</panel_attributes>
+    <additional_attributes>150.0;10.0;150.0;80.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>560</y>
+      <w>130</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1..*
+- ingredientes</panel_attributes>
+    <additional_attributes>110.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>630</x>
+      <y>130</y>
+      <w>150</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+- productos</panel_attributes>
+    <additional_attributes>10.0;20.0;130.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>120</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+- productos</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>220</y>
+      <w>140</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0;120.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>220</y>
+      <w>60</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>40.0;10.0;40.0;130.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>420</y>
+      <w>90</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..*
+- recetas</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>370</y>
+      <w>150</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Item
+--
+- nombre: String
+- cantidad: double
+
+--
++ Item(String,double)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>390</y>
+      <w>120</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+</diagram>
